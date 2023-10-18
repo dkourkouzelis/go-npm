@@ -16,7 +16,7 @@ function verifyAndPlaceBinary(binName, binPath, callback) {
       copyFileSync(join(binPath, binName), join(installationPath, binName));
       console.log('Installing', join(installationPath, binName))
       console.log('Unlinking', join(binPath, binName))
-      unlink(join(binPath, binName));
+      // unlink(join(binPath, binName));
       chmodSync(join(installationPath, binName), '755');
 
       console.log('Placed binary on', join(installationPath, binName));
