@@ -14,6 +14,8 @@ function verifyAndPlaceBinary(binName, binPath, callback) {
 
       // Move the binary file and make sure it is executable
       copyFileSync(join(binPath, binName), join(installationPath, binName));
+      console.log('Installing', join(installationPath, binName))
+      console.log('Unlinking', join(binPath, binName))
       unlink(join(binPath, binName));
       chmodSync(join(installationPath, binName), '755');
 
