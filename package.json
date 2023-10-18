@@ -4,7 +4,7 @@
   "description": "Distribute and install Go binaries via NPM",
   "main": "index.js",
   "bin": {
-    "go-npm": "./bin/index.js"
+    "go-npm": "bin/index.js"
   },
   "scripts": {
     "test": "jest",
