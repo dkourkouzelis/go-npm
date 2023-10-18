@@ -6,7 +6,9 @@ const { createWriteStream } = require('fs');
  */
 function move({ opts, req, onSuccess, onError }) {
 
+  console.log('Start move function')
   const stream = createWriteStream(join(opts.binPath, opts.binName));
+  console.log('End move function')
 
   stream.on('error', onError);
   stream.on('close', onSuccess);
